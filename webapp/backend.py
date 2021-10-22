@@ -26,12 +26,17 @@ class Handler(RequestHandler):
         narrative.extract_semantic_role_links(*data['semantic_role_link_extraction_tools'])
 
         self.write(narrative.ISO_annotation())
+        
+class TestHandler(RequestHandler):
+    def get(self):
+        self.write("Hello World!")
 
 if __name__ == '__main__':
     t2s.start()
 
     app = Application([
-        (r"/", Handler)
+        (r"/", Handler),
+        (r"/test", TestHandler)
     ])
     http_server = HTTPServer(app)
     http_server.listen(8888)
