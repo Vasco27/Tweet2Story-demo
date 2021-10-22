@@ -51,10 +51,10 @@ def draw_sidebar():
 
 def valid_input(tools, narrative_text):
     # Check if it's selected, at least, one tool per extraction
-    for key in tools:
-        if len(tools[key]) == 0:
-            signal_error(key)
-            return False
+    # for key in tools:
+    #     if len(tools[key]) == 0:
+    #         signal_error(key)
+    #         return False
 
     # Check if narrative text isn't empty
     if narrative_text == '':

@@ -22,7 +22,7 @@ class Handler(RequestHandler):
         narrative.extract_actors(*data['actor_extraction_tools'])
         narrative.extract_times(*data['time_extraction_tools'])
         narrative.extract_events(*data['event_extraction_tools'])
-        narrative.extract_objectal_links(*data['objectal_link_extraction_tools'])
+        # narrative.extract_objectal_links(*data['objectal_link_extraction_tools'])
         narrative.extract_semantic_role_links(*data['semantic_role_link_extraction_tools'])
 
         self.write(narrative.ISO_annotation())

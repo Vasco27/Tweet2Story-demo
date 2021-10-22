@@ -37,7 +37,7 @@ SRL_TYPE_MAPPING = {
 pipeline = {}
 
 def load():
-    pipeline['coref_en'] = Predictor.from_path('https://storage.googleapis.com/allennlp-public-models/coref-spanbert-large-2020.02.27.tar.gz')
+    # pipeline['coref_en'] = Predictor.from_path('https://storage.googleapis.com/allennlp-public-models/coref-spanbert-large-2020.02.27.tar.gz')
     pipeline["srl_en"] = Predictor.from_path(
         "https://storage.googleapis.com/allennlp-public-models/structured-prediction-srl-bert.2020.12.15.tar.gz"
     )
