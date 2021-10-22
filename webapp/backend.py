@@ -1,6 +1,7 @@
 from tornado.web import Application, RequestHandler
 from tornado.ioloop import IOLoop
 from tornado.httpserver import HTTPServer
+import asyncio
 
 import json
 
@@ -39,8 +40,12 @@ if __name__ == '__main__':
         (r"/test", TestHandler)
     ])
     http_server = HTTPServer(app)
-    #http_server.listen(int(os.environ.get("STREAMLIT_SERVER_PORT", 5555)))
+    
+    # Create new event loop for the new thread
+    asyncio.set_event_loop(asyncio.new_event_loop())
+    
+    http_server.listen(int(os.environ.get("STREAMLIT_SERVER_PORT", 5555)))
 
     print('Finished configuring')
 
-    #IOLoop.instance().start()
+    IOLoop.instance().start()
