@@ -20,7 +20,7 @@ def load():
     """
 
     #pipeline['pt'] = spacy.load('pt_core_news_lg')
-    pipeline['en'] = spacy.load('en_core_web_lg')
+    pipeline['en'] = spacy.load('en_core_web_sm')
 
     
 def extract_actors(lang, text):
