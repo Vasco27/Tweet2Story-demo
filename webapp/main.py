@@ -3,7 +3,7 @@ from session_state import SessionState, get
 import input_phase, output_phase
 
 import requests, json
-url = 'http://localhost:8888/'
+url = 'https://share.streamlit.io/vasco27/tweet2story-demo/main/webapp/backend.py/'
 
 def init():
     st.set_page_config(page_title='Text2Story', page_icon = None, layout = 'wide', initial_sidebar_state = 'auto')
