@@ -43,4 +43,4 @@ if __name__ == '__main__':
 
     print('Finished configuring')
 
-    IOLoop.instance().start()
+    #IOLoop.instance().start()
