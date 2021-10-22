@@ -3,7 +3,3 @@ __pycache__/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-
-example_tweets/
-env.yml
-requirements-test.txt
