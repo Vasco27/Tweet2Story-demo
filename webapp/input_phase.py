@@ -1,7 +1,6 @@
 import streamlit as st
 
-default_tweets = """
-ts fred continues to weaken as it moves away from the cape verde islands.
+default_tweets = """ts fred continues to weaken as it moves away from the cape verde islands.
 tropical storm grace forms in eastern atlantic.
 ts grace is strengthening with 50 mph winds however the system is expected to weaken in the extended forecast.
 tropical storm grace packing wind gusts of 58 mph.
