@@ -13,7 +13,7 @@ def draw_sidebar():
     # Language
     lang_name_format = {'Portuguese' : 'pt', 'English' : 'en'}
     st.sidebar.header('Language')
-    lang = st.sidebar.radio('', ('English'))
+    lang = st.sidebar.radio('', ('English', "Portuguese"))
     lang = lang_name_format[lang]
 
     # Tools
