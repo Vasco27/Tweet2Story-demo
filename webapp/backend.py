@@ -44,7 +44,7 @@ if __name__ == '__main__':
     # Create new event loop for the new thread
     asyncio.set_event_loop(asyncio.new_event_loop())
     
-    http_server.listen(8888)
+    http_server.listen(5555)
 
     print('Finished configuring')
 
