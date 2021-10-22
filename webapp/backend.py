@@ -39,7 +39,7 @@ if __name__ == '__main__':
         (r"/test", TestHandler)
     ])
     http_server = HTTPServer(app)
-    http_server.listen(int(os.environ.get("STREAMLIT_SERVER_PORT", 5555)))
+    #http_server.listen(int(os.environ.get("STREAMLIT_SERVER_PORT", 5555)))
 
     print('Finished configuring')
 
