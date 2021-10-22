@@ -35,7 +35,7 @@ def draw_sidebar():
 
     st.sidebar.subheader('Objectal link extraction')
     OBJECTAL_LINK_EXTRACTION_TOOLS  = {'allennlp' : False}
-    OBJECTAL_LINK_EXTRACTION_TOOLS['allennlp'] = st.sidebar.checkbox('Allen NLP', key='6', value=True)
+    OBJECTAL_LINK_EXTRACTION_TOOLS['allennlp'] = st.sidebar.checkbox('Allen NLP', key='6', value=False)
 
     st.sidebar.subheader('Semantic Role link extraction')
     SEMANTICROLE_LINK_EXTRACTION_TOOLS = {'allennlp' : False}
