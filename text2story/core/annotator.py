@@ -6,7 +6,7 @@
 
 from text2story.annotators import ACTOR_EXTRACTION_TOOLS, TIME_EXTRACTION_TOOLS, OBJECTAL_LINKS_RESOLUTION_TOOLS
 from text2story.annotators import EVENT_EXTRACTION_TOOLS, SEMANTIC_ROLE_LABELLING_TOOLS
-from text2story.annotators import extract_actors, extract_times#, extract_objectal_links
+from text2story.annotators import extract_actors, extract_times, extract_objectal_links
 from text2story.annotators import extract_events, extract_semantic_role_links
 
 

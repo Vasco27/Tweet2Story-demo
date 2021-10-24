@@ -5,10 +5,10 @@ import asyncio
 
 import json
 
-import os, sys, inspect
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-sys.path.insert(0, parentdir)
+# import os, sys, inspect
+# currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+# parentdir = os.path.dirname(currentdir)
+# sys.path.insert(0, parentdir)
  
 import text2story as t2s
 
@@ -23,7 +23,7 @@ class Handler(RequestHandler):
         narrative.extract_actors(*data['actor_extraction_tools'])
         narrative.extract_times(*data['time_extraction_tools'])
         narrative.extract_events(*data['event_extraction_tools'])
-        # narrative.extract_objectal_links(*data['objectal_link_extraction_tools'])
+        narrative.extract_objectal_links(*data['objectal_link_extraction_tools'])
         narrative.extract_semantic_role_links(*data['semantic_role_link_extraction_tools'])
 
         self.write(narrative.ISO_annotation())
@@ -38,13 +38,13 @@ if __name__ == '__main__':
     app = Application([
         (r"/", Handler),
         (r"/test", TestHandler)
-    ])
+    ], debug=True)
     http_server = HTTPServer(app)
     
     # Create new event loop for the new thread
     asyncio.set_event_loop(asyncio.new_event_loop())
     
-    http_server.listen(5555)
+    http_server.listen(8888)
 
     print('Finished configuring')
 

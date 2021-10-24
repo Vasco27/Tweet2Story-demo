@@ -32,11 +32,11 @@ def extract_times(tool, lang, text, publication_time):
     raise InvalidTool
 
 
-# def extract_objectal_links(tool, lang, text):
-#     if tool == 'allennlp':
-#         return ALLENNLP.extract_objectal_links(lang, text)
+def extract_objectal_links(tool, lang, text):
+    if tool == 'allennlp':
+        return ALLENNLP.extract_objectal_links(lang, text)
 
-#     raise InvalidTool
+    raise InvalidTool
 
 
 def extract_events(tool, lang, text):
